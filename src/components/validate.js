@@ -3,7 +3,7 @@ import React from 'react';
 export default function Validate(password){
     const check=password;
         const sizedFields = {
-            password: { min: 8, max: 72 }
+            password: { min: 8, max: 10 }
           };
         
           const tooSmallField = Object.keys(sizedFields).find(

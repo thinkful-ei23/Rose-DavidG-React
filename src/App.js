@@ -4,15 +4,19 @@ import './App.css';
 import PasswordInput from './components/passwordInput';
 import IsValid from './components/isValid';
 
-class App extends Component {
+export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      password: "password"
+    };
+  }
   render() {
     return (
       <div>
       <PasswordInput />
-      <IsValid />
+      <IsValid password={this.state.password}  />
       </div>
     );
   }
 }
-
-export default App;

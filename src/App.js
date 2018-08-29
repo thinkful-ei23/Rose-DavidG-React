@@ -8,13 +8,13 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      password: "password"
+      password: "" 
     };
   }
   render() {
     return (
       <div>
-      <PasswordInput />
+      <PasswordInput handleChange={password => this.setState({password})} />
       <IsValid password={this.state.password}  />
       </div>
     );
